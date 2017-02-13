@@ -131,52 +131,52 @@ static NSString * const kKFStreamsCollection = @"kKFStreamsCollection";
 }
 
 - (void) apiExample {
-    [[KFAPIClient sharedClient] requestNewActiveUserWithUsername:@"bob" password:@"secret password" email:@"bob@example.com" displayName:@"Bob Jones" extraInfo:@{@"otherInfo": @"Any other key/values you would want"} callbackBlock:^(KFUser *activeUser, NSError *error) {
-        if (activeUser) {
-            NSLog(@"great, you've got a new user!");
-        }
-    }];
-    [[KFAPIClient sharedClient] updateMetadataForActiveUserWithNewPassword:nil email:@"test@example.com" displayName:@"Bob Jones II" extraInfo:@{@"otherInfo": @"Any other key/values you would want"}  callbackBlock:^(KFUser *updatedUser, NSError *error) {
-        if (updatedUser) {
-            NSLog(@"great, you've got updated a user!");
-        }
-    }];
-    
-    [[KFAPIClient sharedClient] requestUserInfoForUsername:@"existing-username" callbackBlock:^(KFUser *existingUser, NSError *error) {
-        if (existingUser) {
-            NSLog(@"you got info for an existing user!");
-        }
-    }];
-    
-    [[KFAPIClient sharedClient] loginExistingUserWithUsername:@"existing-username" password:@"password" callbackBlock:^(KFUser *existingUser, NSError *error) {
-        if (existingUser) {
-            NSLog(@"successfully logged in existing user");
-        }
-    }];
-    
-    [[KFAPIClient sharedClient] startNewStream:^(KFStream *newStream, NSError *error) {
-        if (newStream) {
-            NSLog(@"it's a new stream ready for public broadcast!");
-        }
-    }];
-    
-    KFStream *stream = nil;
-    
-    [[KFAPIClient sharedClient] stopStream:stream callbackBlock:^(BOOL success, NSError *error) {
-        if (success) {
-            NSLog(@"Stream stopped");
-        }
-    }];
-    
-    [[KFAPIClient sharedClient] updateMetadataForStream:stream callbackBlock:^(KFStream *updatedStream, NSError *error) {
-        if (updatedStream) {
-            NSLog(@"stream updated!");
-        }
-    }];
-    
-    [[KFAPIClient sharedClient] requestStreamsByKeyword:@"skateboard" pageNumber:1 itemsPerPage:10 callbackBlock:^(NSArray *streams, KFPaginationInfo *paginationInfo, NSError *error) {
-        NSLog(@"found %d streams", (int)streams.count);
-    }];
+//    [[KFAPIClient sharedClient] requestNewActiveUserWithUsername:@"bob" password:@"secret password" email:@"bob@example.com" displayName:@"Bob Jones" extraInfo:@{@"otherInfo": @"Any other key/values you would want"} callbackBlock:^(KFUser *activeUser, NSError *error) {
+//        if (activeUser) {
+//            NSLog(@"great, you've got a new user!");
+//        }
+//    }];
+//    [[KFAPIClient sharedClient] updateMetadataForActiveUserWithNewPassword:nil email:@"test@example.com" displayName:@"Bob Jones II" extraInfo:@{@"otherInfo": @"Any other key/values you would want"}  callbackBlock:^(KFUser *updatedUser, NSError *error) {
+//        if (updatedUser) {
+//            NSLog(@"great, you've got updated a user!");
+//        }
+//    }];
+//    
+//    [[KFAPIClient sharedClient] requestUserInfoForUsername:@"existing-username" callbackBlock:^(KFUser *existingUser, NSError *error) {
+//        if (existingUser) {
+//            NSLog(@"you got info for an existing user!");
+//        }
+//    }];
+//    
+//    [[KFAPIClient sharedClient] loginExistingUserWithUsername:@"existing-username" password:@"password" callbackBlock:^(KFUser *existingUser, NSError *error) {
+//        if (existingUser) {
+//            NSLog(@"successfully logged in existing user");
+//        }
+//    }];
+//    
+//    [[KFAPIClient sharedClient] startNewStream:^(KFStream *newStream, NSError *error) {
+//        if (newStream) {
+//            NSLog(@"it's a new stream ready for public broadcast!");
+//        }
+//    }];
+//    
+//    KFStream *stream = nil;
+//    
+//    [[KFAPIClient sharedClient] stopStream:stream callbackBlock:^(BOOL success, NSError *error) {
+//        if (success) {
+//            NSLog(@"Stream stopped");
+//        }
+//    }];
+//    
+//    [[KFAPIClient sharedClient] updateMetadataForStream:stream callbackBlock:^(KFStream *updatedStream, NSError *error) {
+//        if (updatedStream) {
+//            NSLog(@"stream updated!");
+//        }
+//    }];
+//    
+//    [[KFAPIClient sharedClient] requestStreamsByKeyword:@"skateboard" pageNumber:1 itemsPerPage:10 callbackBlock:^(NSArray *streams, KFPaginationInfo *paginationInfo, NSError *error) {
+//        NSLog(@"found %d streams", (int)streams.count);
+//    }];
     
     CLLocation *currentLocation = nil;
     [[KFAPIClient sharedClient] requestStreamsForLocation:currentLocation radius:100 pageNumber:1 itemsPerPage:25 callbackBlock:^(NSArray *streams, KFPaginationInfo *paginationInfo, NSError *error) {
@@ -217,6 +217,8 @@ static NSString * const kKFStreamsCollection = @"kKFStreamsCollection";
     
     [self setupTableView];
     [self setupPullToRefresh];
+    
+    //[self apiExample]; //add by tzx
 }
 
 - (void) setupViewMappings {
@@ -239,6 +241,10 @@ static NSString * const kKFStreamsCollection = @"kKFStreamsCollection";
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+#if 1
+
+#else
     [self refreshStreams];
     
     BOOL hasCompletedOnboarding = [[[NSUserDefaults standardUserDefaults] objectForKey:KFHasCompletedOnboardingKey] boolValue];
@@ -248,6 +254,7 @@ static NSString * const kKFStreamsCollection = @"kKFStreamsCollection";
         onboardingViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:onboardingViewController animated:NO completion:nil];
     }
+#endif
 }
 
 - (void) refreshStreams {

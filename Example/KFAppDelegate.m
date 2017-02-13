@@ -22,7 +22,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [Kickflip setupWithAPIKey:KICKFLIP_API_KEY secret:KICKFLIP_API_SECRET];
+    //[Kickflip setupWithAPIKey:KICKFLIP_API_KEY secret:KICKFLIP_API_SECRET]; //del by tzx
     [Kickflip setMaxBitrate:2000*1000]; // 2 Mbps
     
     [DDLog addLogger:[DDTTYLogger sharedInstance]];

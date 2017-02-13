@@ -21,8 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		4BA8413B7CA949B0A7A2AF9F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C3B6210219445A92F3D20B /* libPods.a */; };
-		D925AD7B1A3FD1D7001A1C58 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = D925AD7A1A3FD1D7001A1C58 /* Pods-acknowledgements.plist */; };
+		6C3348241E4C5AC8005FF3B3 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C3348231E4C5AC8005FF3B3 /* Pods-acknowledgements.plist */; };
+		CCE5C4B80746AB637F6530B0 /* libPods-Kickflip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A056B4774CF11DD0EAB278 /* libPods-Kickflip.a */; };
 		D945ADA4189853A80026F697 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99912CE18984D3F00BFCBA4 /* Foundation.framework */; };
 		D945ADA6189853A80026F697 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D945ADA5189853A80026F697 /* CoreGraphics.framework */; };
 		D945ADD7189854000026F697 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D945ADCF189854000026F697 /* InfoPlist.strings */; };
@@ -43,10 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1491D2D979AA56461FB4ECBB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D5C3B6210219445A92F3D20B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D824578567D5C73BC350F434 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D925AD7A1A3FD1D7001A1C58 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		10B283E1CF8823B073C47103 /* Pods-Kickflip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kickflip.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kickflip/Pods-Kickflip.release.xcconfig"; sourceTree = "<group>"; };
+		13A056B4774CF11DD0EAB278 /* libPods-Kickflip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kickflip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		379C515284C57E5A594592B3 /* Pods-Kickflip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kickflip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kickflip/Pods-Kickflip.debug.xcconfig"; sourceTree = "<group>"; };
+		6C3348231E4C5AC8005FF3B3 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		D945ADA3189853A80026F697 /* Kickflip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kickflip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D945ADA5189853A80026F697 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D945ADD0189854000026F697 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -89,16 +89,26 @@
 				D945ADA6189853A80026F697 /* CoreGraphics.framework in Frameworks */,
 				D945AF571898724A0026F697 /* AVFoundation.framework in Frameworks */,
 				D945ADA4189853A80026F697 /* Foundation.framework in Frameworks */,
-				4BA8413B7CA949B0A7A2AF9F /* libPods.a in Frameworks */,
+				CCE5C4B80746AB637F6530B0 /* libPods-Kickflip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55F8D0C00768CE53793B12A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				379C515284C57E5A594592B3 /* Pods-Kickflip.debug.xcconfig */,
+				10B283E1CF8823B073C47103 /* Pods-Kickflip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D945ADCE189854000026F697 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				6C3348231E4C5AC8005FF3B3 /* Pods-acknowledgements.plist */,
 				D9FFDAB6194BC7B300D76CFF /* KFConstants.h */,
 				D9FFDAB7194BC7B300D76CFF /* KFConstants.m */,
 				D9FFDAB1194BB4F300D76CFF /* KFOnboardingViewController.h */,
@@ -110,7 +120,6 @@
 				D945ADD2189854000026F697 /* KFAppDelegate.h */,
 				D945ADD3189854000026F697 /* KFAppDelegate.m */,
 				D945AF3F1898635A0026F697 /* KFDemoViewController.h */,
-				D925AD7A1A3FD1D7001A1C58 /* Pods-acknowledgements.plist */,
 				D945AF401898635A0026F697 /* KFDemoViewController.m */,
 				D945ADD4189854000026F697 /* Kickflip-Info.plist */,
 				D945ADD5189854000026F697 /* Kickflip-Prefix.pch */,
@@ -125,7 +134,7 @@
 				D945ADCE189854000026F697 /* Example */,
 				D99912CD18984D3F00BFCBA4 /* Frameworks */,
 				D99912CC18984D3F00BFCBA4 /* Products */,
-				ED4123747B51A1D2587A7240 /* Pods */,
+				55F8D0C00768CE53793B12A1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,18 +159,9 @@
 				D99912CE18984D3F00BFCBA4 /* Foundation.framework */,
 				D99912DC18984D3F00BFCBA4 /* XCTest.framework */,
 				D945ADA5189853A80026F697 /* CoreGraphics.framework */,
-				D5C3B6210219445A92F3D20B /* libPods.a */,
+				13A056B4774CF11DD0EAB278 /* libPods-Kickflip.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ED4123747B51A1D2587A7240 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D824578567D5C73BC350F434 /* Pods.debug.xcconfig */,
-				1491D2D979AA56461FB4ECBB /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,12 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D945ADC8189853A90026F697 /* Build configuration list for PBXNativeTarget "Kickflip" */;
 			buildPhases = (
-				FD523A8DB5414023AF7AF9A6 /* Check Pods Manifest.lock */,
+				F73B63B154CF3CB2A78EA5C6 /* [CP] Check Pods Manifest.lock */,
 				D945AD9F189853A80026F697 /* Sources */,
 				D945ADA0189853A80026F697 /* Frameworks */,
 				D945ADA1189853A80026F697 /* Resources */,
-				ED2B2FA4594E4D2FB926AF71 /* Copy Pods Resources */,
-				4D1E4AA9D6860A7408476908 /* Embed Pods Frameworks */,
+				C7C74F8DD37D801368E422AB /* [CP] Embed Pods Frameworks */,
+				4A0C3D2B8271A0E1E73623D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +195,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Kickflip;
+				TargetAttributes = {
+					D945ADA2189853A80026F697 = {
+						DevelopmentTeam = 4QGCBVR5TL;
+					};
+				};
 			};
 			buildConfigurationList = D99912C618984D3F00BFCBA4 /* Build configuration list for PBXProject "Kickflip" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -222,26 +227,41 @@
 				D945ADD7189854000026F697 /* InfoPlist.strings in Resources */,
 				D9FFDAB5194BB4F300D76CFF /* KFOnboardingViewController.xib in Resources */,
 				D945ADD8189854000026F697 /* Images.xcassets in Resources */,
-				D925AD7B1A3FD1D7001A1C58 /* Pods-acknowledgements.plist in Resources */,
+				6C3348241E4C5AC8005FF3B3 /* Pods-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D1E4AA9D6860A7408476908 /* Embed Pods Frameworks */ = {
+		4A0C3D2B8271A0E1E73623D4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kickflip/Pods-Kickflip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C74F8DD37D801368E422AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kickflip/Pods-Kickflip-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9F50E0F18FC956F00A71C1F /* ShellScript */ = {
@@ -257,34 +277,19 @@
 			shellPath = /bin/sh;
 			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Kickflip\";\ncompanyID=\"io.kickflip\";\ncompanyURL=\"https://kickflip.io\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"${PROJECT_DIR}/Docs\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n--ignore \"*.m\" \\\n\"${PROJECT_DIR}/Submodules/kickflip-ios-sdk\"";
 		};
-		ED2B2FA4594E4D2FB926AF71 /* Copy Pods Resources */ = {
+		F73B63B154CF3CB2A78EA5C6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD523A8DB5414023AF7AF9A6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -318,11 +323,13 @@
 /* Begin XCBuildConfiguration section */
 		D945ADC9189853A90026F697 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D824578567D5C73BC350F434 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 379C515284C57E5A594592B3 /* Pods-Kickflip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4QGCBVR5TL;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -342,11 +349,13 @@
 		};
 		D945ADCA189853A90026F697 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1491D2D979AA56461FB4ECBB /* Pods.release.xcconfig */;
+			baseConfigurationReference = 10B283E1CF8823B073C47103 /* Pods-Kickflip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4QGCBVR5TL;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
